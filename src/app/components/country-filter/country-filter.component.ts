@@ -7,7 +7,7 @@ import {CountryFilterPipe} from '../../pipes/country-filter.pipe';
 @Component({
   selector: 'app-country-filter',
   templateUrl: './country-filter.component.html',
-  styleUrls: ['./country-filter.component.css']
+  styleUrls: ['./country-filter.component.scss']
 })
 export class CountryFilterComponent implements OnInit {
 

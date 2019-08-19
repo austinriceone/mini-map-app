@@ -1,8 +1,7 @@
 <div *ngIf="countryList" class="container-fluid">
   <app-country-filter [countries]="countryList"
                       (filteredCountriesEmitter)="filteredCountries = $event"></app-country-filter>
-  <h6>Click a flag to show its country's location on the map.</h6>
-  <div style="max-height: 55vh;overflow-y: scroll">
+  <div>
     <table class="table table-hover">
       <thead>
       <th class="row-flag">Flag</th>
@@ -15,7 +14,7 @@
       <th class="row-native">Native Name</th>
       </thead>
       <tbody>
-      <tr *ngFor="let country of filteredCountries" class="clickable" (click)="selectCountry(country)">
+      <tr *ngFor="let country of filteredCountries" class="clickable {{selectedCountry.name === country.name ? 'bg-primary text-white' : ''}}" (click)="selectCountry(country)">
         <td>
           <img class="flag-sm" [src]="country.flagImage">
         </td>

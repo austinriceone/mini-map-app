@@ -1,0 +1,32 @@
+$test-color: #be3572;
+$hold: #F8DDD4;
+$carousel-control-color: black;
+$carousel-indicator-active-bg: black;
+$carousel-indicator-border-color: black;
+$enable-gradients: false;
+
+// Colors
+
+$theme-colors: (
+  "primary": #3e80a5,
+  "danger": #FB4F4F,
+  "light-primary": lighten(#3e80a5, 30),
+  "lightest-primary": #d1c0de,
+  "success": #1CCA6A,
+  "secondary": #3d4351,
+  "white": #FFF,
+  "minty": #69F0AF,
+  "light-danger": lighten(#dc3545, 25),
+  "alert": #ff912d
+) !default;
+
+$table-cell-padding-md: .5rem;
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
