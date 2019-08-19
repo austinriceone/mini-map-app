@@ -13,7 +13,9 @@ export class GoogleMapComponent implements OnInit {
   @Input() displayedCountry: Country;
 
   ngOnInit() {
-
   }
 
+  calculateZoom() {
+    return 50 / (Math.log(this.displayedCountry.area));
+  }
 }

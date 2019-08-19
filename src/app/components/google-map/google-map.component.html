@@ -1,6 +1,6 @@
-<h3>{{displayedCountry?.name}}</h3>
+<h3 class="container-fluid">{{displayedCountry?.name}}</h3>
 <agm-map *ngIf="displayedCountry" [latitude]="displayedCountry.latitude"
          [longitude]="displayedCountry.longitude"
-         [zoom]="5" style="height: 300px">
+         [zoom]="calculateZoom()">
     <agm-marker [latitude]="displayedCountry.latitude" [longitude]="displayedCountry.longitude"></agm-marker>
 </agm-map>

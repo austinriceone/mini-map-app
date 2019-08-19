@@ -1,6 +1,7 @@
 .flag-sm {
     width: 50px;
     height: 33px;
+    cursor: pointer;
 }
 
 table {
@@ -8,14 +9,20 @@ table {
     width: 100%;
 }
 
+.clickable {
+  &:hover {
+   cursor: pointer;
+ }
+}
+
 .row-flag {
-    width: 5%
+    width: 2.5%
 }
 .row-name {
-    width: 6%
+    width: 8%
 }
 .row-region {
-    width: 6%
+    width: 4%
 }
 .row-subregion {
     width: 6%

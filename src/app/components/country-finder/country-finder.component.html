@@ -1,4 +1,4 @@
 <div>
-  <app-google-map [displayedCountry]="selectedCountry"></app-google-map>
+  <app-google-map style="max-height: 35vh" [displayedCountry]="selectedCountry"></app-google-map>
   <app-country-list (selectedCountryEmitter)="selectedCountry = $event"></app-country-list>
 </div>
