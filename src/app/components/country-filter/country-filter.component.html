@@ -1,0 +1,8 @@
+<div class="pb-4">
+    <label><h5>Country Search</h5></label>
+    <input class="form-control w-25"
+           *ngIf="countries"
+           type="text" placeholder="Enter Country Information"
+           [(ngModel)]="filterArgument"
+           (ngModelChange)="filterArgumentChange$.next(true)">
+</div>

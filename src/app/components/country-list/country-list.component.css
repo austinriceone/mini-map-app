@@ -1,0 +1,31 @@
+.flag-sm {
+    width: 50px;
+    height: 33px;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.row-flag {
+    width: 5%
+}
+.row-name {
+    width: 6%
+}
+.row-region {
+    width: 6%
+}
+.row-subregion {
+    width: 6%
+}
+.row-currency {
+    width: 10%
+}
+.row-language {
+    width: 5%
+}
+.row-native {
+    width: 10%
+}
