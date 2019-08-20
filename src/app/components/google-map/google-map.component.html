@@ -1,8 +1,9 @@
-<h3 class="container-fluid">{{displayedCountry?.name}}</h3>
+<h3 class="container-fluid">{{displayedCountry?.name ? displayedCountry.name : 'mini-map-app'}}</h3>
 <div class="sticky-top" style="top: 0;z-index: 1021">
   <agm-map *ngIf="displayedCountry" [latitude]="displayedCountry.latitude"
            [longitude]="displayedCountry.longitude"
            [zoom]="calculateZoom()">
     <agm-marker [latitude]="displayedCountry.latitude" [longitude]="displayedCountry.longitude"></agm-marker>
   </agm-map>
+  <div *ngIf="!displayedCountry" style="height: 300px" class="bg-dark text-white d-flex justify-content-center align-items-center">Loading...</div>
 </div>
