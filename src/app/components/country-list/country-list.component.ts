@@ -1,7 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {CountriesService} from '../../services/countries.service';
 import {Country} from '../../dtos/country';
-import {CountryFilterPipe} from '../../pipes/country-filter.pipe';
 
 @Component({
   selector: 'app-country-list',
@@ -10,10 +9,10 @@ import {CountryFilterPipe} from '../../pipes/country-filter.pipe';
 })
 export class CountryListComponent implements OnInit {
 
-  constructor(private countriesService: CountriesService, private countryFilterPipe: CountryFilterPipe) {
+  constructor(private countriesService: CountriesService) {
   }
 
-  countryList: Array<Country>;
+  countryList: Array<Country> = [];
   filteredCountries: Array<Country>;
   selectedCountry: Country;
 

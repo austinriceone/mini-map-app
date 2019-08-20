@@ -9,11 +9,10 @@ export class CountryFilterPipe implements PipeTransform {
   transform(countriesToFilter: Array<Country>, term?: any): any {
     return countriesToFilter.filter(country => {
       const countryKeys = Object.keys(country);
-      countryKeys.some(key => {
-        const value = country[key].toString().trim().toLowerCase();
+      return countryKeys.some(key => {
+        const value = country[key] ? country[key].toString().trim().toLowerCase() : '';
         return value ? value.includes(term.toString().trim().toLowerCase()) : false;
       });
     });
   }
-
 }
